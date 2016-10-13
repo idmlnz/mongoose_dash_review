@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Mongoose - Update </title>
+    <meta charset="utf-8">
+    <meta name="description" content="Mongoose App">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <style>
+      .action {
+        display:inline;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- update mongoose update page  -->
+    <div class="jumbotron">
+     <div class="container">
+        <p>Update a mongoose </p>
+     </div>
+    </div><!-- End update mongoose update page -->
+
+    <div class="container">
+      <div class="row well col-sm-10 col-sm-offset-1" style="margin-top: 10px">
+
+        <form action="/mongooses/<%= animal['_id'] %>" method="post">
+            <div class="form-group row">
+              <label for="animal" class="col-xs-3 col-form-label">Animal:</label>
+              <div class="col-xs-5 label">
+                <input class="form-control" type="text" name="animal" value="<%= animal['animal'] %>" id="animal">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="nlegs" class="col-xs-3 col-form-label">No of legs:</label>
+              <div class="col-xs-5 label">
+                <input class="form-control" type="text" name="nlegs" value="<%= animal['nlegs'] %>" id="nlegs">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="color" class="col-xs-3 col-form-label">Color:</label>
+              <div class="col-xs-5 label">
+                <input class="form-control" type="text" name="color" value="<%= animal['color'] %>" id="color">
+              </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-12">
+                  <input type="submit" class="btn btn-sm btn-info" value="Update">
+                </div>
+            </div>
+
+        </form>  <!-- End update form -->
+
+      <div class="row">
+            <div class="col-sm-10">
+                <!--
+              <form action="/mongooses/<%=animal['_id']%>" method="post">
+                <u class="inline"><input type="submit" class="bare center-block action" name="action" value="Show"></u>
+                <u class="inline"><a href="/products/display"><strong><u class="action">Back</u></strong></a> </u>
+              </form>
+              -->
+              <a href="/mongooses/<%=animal['_id']%>"><strong><u>Show</u></strong></a>
+              <a href="/"><strong><u>Back</u></strong></a>
+            </div>
+      </div>
+
+
+
+       </div>  <!-- End well -->
+    </div> <!-- End container row -->
+  </body>
+</html>

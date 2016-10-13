@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mongoose </title>
+  <meta name="description" content="Mongoose App ">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <style>
+        .label {
+            margin-top: -8px;
+        }
+        .bodycontainer {
+            max-height: 400px;
+            width: 100%;
+            margin: 0;
+            overflow-y: auto;
+        }
+        .table-scrollable {
+            margin: 0;
+            padding: 0;
+        }
+        .action{
+            padding-right:5px;
+        }
+        .bare {
+            border: 0;
+            background:none;
+            color:blue
+        }
+        .action{
+            padding-right:5px;
+        }
+        .bare {
+            border: 0;
+            background:none;
+            color:blue
+        }
+        .action {
+            display:inline;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="jumbotron">
+        <div class="container">
+            <p>Add an animal </p>
+        </div>
+    </div><!-- End update mongoose update page -->
+
+      <div class="container">
+        <div class="row">
+          <div class="well col-sm-6 col-sm-offset-3" style="margin-top: 100px">
+            <form action="/mongooses" method="post">
+
+                <div class="form-group row">
+                  <label for="animal-type" class="col-xs-2 col-form-label">Animal:</label>
+                  <div class="col-xs-10">
+                    <input class="form-control" type="text" name="animal" placeholder="Type of animal" id="animal-type">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="num-legs" class="col-xs-2 col-form-label">Legs:</label>
+                  <div class="col-xs-10">
+                    <input class="form-control" type="text" name="legs" placeholder="Number of legs" id="num-legs">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="color" class="col-xs-2 col-form-label">Color:</label>
+                  <div class="col-xs-10">
+                    <input class="form-control" type="text" name="color" placeholder="Enter color" id="color">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                      <button type="input" class="btn pull-right btn-info">Submit</button>
+                    </div>
+                </div>
+
+            </form>  <!-- End form -->
+
+          </div> <!-- End class column -->
+        </div> <!-- End class row -->
+      </div> <!-- End container -->
+
+      <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

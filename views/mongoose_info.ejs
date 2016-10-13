@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Restful Users -  display user page</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Restful Users">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <style>
+      .action{
+        padding-right:5px
+      }
+      u {
+        padding-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Add user page  heading -->
+    <div class="jumbotron">
+     <div class="container">
+        <p>Display user </p>
+     </div>
+    </div><!-- End Add user page heading -->
+
+    <div class="container">
+      <div class="row well col-sm-10 col-sm-offset-1" style="margin-top: 10px">
+            <!-- display email -->
+            {% for u in users: %}
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <h4 id="valid">UserID:  {{ u['id'] }} </h4>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <h5><u>Full Name:</u> {{ u['firstname'] ~ " " ~ u['lastname'] }}</h5>
+                    <h5><u>Email:</u> {{ u['email'] }}</h5>
+                    <h5><u>Created at:</u>{{ u['created_at'] }}</h5>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <u>
+                      <a href="http://w3schools.com"><strong><u class="action">Edit</u></strong></a>
+                      <a href="/user/{{u['id']}}/destroy"><strong><u class="action">Delete</u></strong></a>
+                    </u>
+                  </div>
+                </div>
+            {% endfor %}
+       </div>  <!-- End well -->
+    </div> <!-- End container row -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
